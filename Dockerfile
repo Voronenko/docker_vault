@@ -16,5 +16,4 @@ RUN echo $EXTERNAL_VAULT_TOKEN > ~/.vault-token
 
 EXPOSE 8200
 
-ENTRYPOINT ["/bin/vault"]
-CMD ["server", "-dev-listen-address=0.0.0.0:8200", "-dev", "-dev-root-token-id=$EXTERNAL_VAULT_TOKEN"]
+CMD ["sh", "-c", "/bin/vault server -dev-listen-address=0.0.0.0:8200 -dev -dev-root-token-id=${EXTERNAL_VAULT_TOKEN}"]
