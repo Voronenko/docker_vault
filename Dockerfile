@@ -1,8 +1,8 @@
 
 FROM alpine:latest
 MAINTAINER Vyacheslav Voronenko , originally cloned from https://github.com/sjourdan/docker-vault
-ENV REFRESHED_AT 2016-06-21
-ENV VAULT_VERSION 0.6.0
+ARG VAULT_VERSION=0.6.0
+ENV REFRESHED_AT 2018-03-21
 ENV EXTERNAL_VAULT_TOKEN abfd0e04-7922-6850-e1bd-f02c325f1e2c
 
 # x509 expects certs to be in this file only.

@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-IMAGE_NAME=voronenko/vault
+VAULT_VERSION=${1:-0.6.0}
+IMAGE_NAME=voronenko/vault:${VAULT_VERSION}
 
-echo "- Pushing Docker Image ${IMAGE_NAME}:"
+echo "- Pushing Docker Image ${IMAGE_NAME}"
 docker push ${IMAGE_NAME}
